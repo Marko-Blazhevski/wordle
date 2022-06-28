@@ -1,0 +1,5 @@
+<div id="game-board">
+  <div *ngFor="let i of [].constructor(num_rows)" [class.letter-row]="true">
+    <div *ngFor="let j of [].constructor(num_letters)" [class.wordle_letter]="true"></div>
+  </div>
+</div>

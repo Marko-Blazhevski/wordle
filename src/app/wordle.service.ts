@@ -1,0 +1,13 @@
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class WordleService {
+
+  constructor() { }
+
+  getWord() : string {
+    return "wordy";
+}
+}

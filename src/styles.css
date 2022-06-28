@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+app-root h1 {
+  font-weight: lighter;
+  font-family: "Heiti SC";
+
+}
+app-root
+{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
