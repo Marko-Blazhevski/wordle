@@ -1,39 +1,39 @@
 <h1>WORDLE</h1>
-<app-wordle-line #app_wordle_line [letter]="selected_letter"></app-wordle-line>
+<app-wordle-line (buttonDisabled)="disableButtons()" #app_wordle_line [letter]="selected_letter"></app-wordle-line>
 
 <div id="keyboard-cont">
   <div class="first-row">
-    <button class="keyboard-button" (click)="onSelect('q')">q</button>
-    <button class="keyboard-button" (click)="onSelect('w')">w</button>
-    <button class="keyboard-button" (click)="onSelect('e')">e</button>
-    <button class="keyboard-button" (click)="onSelect('r')">r</button>
-    <button class="keyboard-button" (click)="onSelect('t')">t</button>
-    <button class="keyboard-button" (click)="onSelect('y')">y</button>
-    <button class="keyboard-button" (click)="onSelect('u')">u</button>
-    <button class="keyboard-button" (click)="onSelect('i')">i</button>
-    <button class="keyboard-button" (click)="onSelect('o')">o</button>
-    <button class="keyboard-button" (click)="onSelect('p')">p</button>
+    <button class="keyboard-button" [disabled]="isDisabled" (click)="onSelect('q')">q</button>
+    <button class="keyboard-button" [disabled]="isDisabled" (click)="onSelect('w')">w</button>
+    <button class="keyboard-button" [disabled]="isDisabled" (click)="onSelect('e')">e</button>
+    <button class="keyboard-button" [disabled]="isDisabled" (click)="onSelect('r')">r</button>
+    <button class="keyboard-button" [disabled]="isDisabled" (click)="onSelect('t')">t</button>
+    <button class="keyboard-button" [disabled]="isDisabled" (click)="onSelect('y')">y</button>
+    <button class="keyboard-button" [disabled]="isDisabled" (click)="onSelect('u')">u</button>
+    <button class="keyboard-button" [disabled]="isDisabled" (click)="onSelect('i')">i</button>
+    <button class="keyboard-button" [disabled]="isDisabled" (click)="onSelect('o')">o</button>
+    <button class="keyboard-button" [disabled]="isDisabled" (click)="onSelect('p')">p</button>
   </div>
   <div class="second-row">
-    <button class="keyboard-button" (click)="onSelect('a')">a</button>
-    <button class="keyboard-button" (click)="onSelect('s')">s</button>
-    <button class="keyboard-button" (click)="onSelect('d')">d</button>
-    <button class="keyboard-button" (click)="onSelect('f')">f</button>
-    <button class="keyboard-button" (click)="onSelect('g')">g</button>
-    <button class="keyboard-button" (click)="onSelect('h')">h</button>
-    <button class="keyboard-button" (click)="onSelect('j')">j</button>
-    <button class="keyboard-button" (click)="onSelect('k')">k</button>
-    <button class="keyboard-button" (click)="onSelect('l')">l</button>
+    <button class="keyboard-button" [disabled]="isDisabled" (click)="onSelect('a')">a</button>
+    <button class="keyboard-button" [disabled]="isDisabled" (click)="onSelect('s')">s</button>
+    <button class="keyboard-button" [disabled]="isDisabled" (click)="onSelect('d')">d</button>
+    <button class="keyboard-button" [disabled]="isDisabled" (click)="onSelect('f')">f</button>
+    <button class="keyboard-button" [disabled]="isDisabled" (click)="onSelect('g')">g</button>
+    <button class="keyboard-button" [disabled]="isDisabled" (click)="onSelect('h')">h</button>
+    <button class="keyboard-button" [disabled]="isDisabled" (click)="onSelect('j')">j</button>
+    <button class="keyboard-button" [disabled]="isDisabled" (click)="onSelect('k')">k</button>
+    <button class="keyboard-button" [disabled]="isDisabled" (click)="onSelect('l')">l</button>
   </div>
   <div class="third-row">
-    <button class="keyboard-button" (click)="app_wordle_line.delete()">Del</button>
-    <button class="keyboard-button" (click)="onSelect('z')" >z</button>
-    <button class="keyboard-button" (click)="onSelect('x')" >x</button>
-    <button class="keyboard-button" (click)="onSelect('c')" >c</button>
-    <button class="keyboard-button" (click)="onSelect('v')" >v</button>
-    <button class="keyboard-button" (click)="onSelect('b')" >b</button>
-    <button class="keyboard-button" (click)="onSelect('n')" >n</button>
-    <button class="keyboard-button" (click)="onSelect('m')" >m</button>
-    <button class="keyboard-button" (click)="app_wordle_line.check()">Enter</button>
+    <button class="keyboard-button" [disabled]="isDisabled" (click)="app_wordle_line.delete()">Del</button>
+    <button class="keyboard-button" [disabled]="isDisabled" (click)="onSelect('z')" >z</button>
+    <button class="keyboard-button" [disabled]="isDisabled" (click)="onSelect('x')" >x</button>
+    <button class="keyboard-button" [disabled]="isDisabled" (click)="onSelect('c')" >c</button>
+    <button class="keyboard-button" [disabled]="isDisabled" (click)="onSelect('v')" >v</button>
+    <button class="keyboard-button" [disabled]="isDisabled" (click)="onSelect('b')" >b</button>
+    <button class="keyboard-button" [disabled]="isDisabled" (click)="onSelect('n')" >n</button>
+    <button class="keyboard-button" [disabled]="isDisabled" (click)="onSelect('m')" >m</button>
+    <button class="keyboard-button" [disabled]="isDisabled" (click)="app_wordle_line.check()">Enter</button>
   </div>
 </div>

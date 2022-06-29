@@ -1,4 +1,5 @@
-import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {Component, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
+import {EventEmitter} from "@angular/core";
 
 import * as $ from 'jquery';
 import {WordleService} from "../wordle.service";
@@ -16,6 +17,8 @@ export class WordleLineComponent implements OnInit , OnChanges {
   WORD! : string;
 
   @Input() letter? : [string , number];
+
+  @Output() buttonDisabled = new EventEmitter();
 
   constructor(private wordleService : WordleService) { }
 
@@ -56,11 +59,7 @@ export class WordleLineComponent implements OnInit , OnChanges {
     }
     if(word == this.WORD){
       alert('YOU WON');
-      let buttons = document.getElementsByClassName('keyboard-button');
-      for(let i=0;i<buttons.length;i++){
-        let elem = buttons.item(i) as HTMLButtonElement;
-        elem.disabled = true;
-      }
+      this.buttonDisabled.emit(null);
       if(window.confirm('Start again?')){
         location.reload();
       }
